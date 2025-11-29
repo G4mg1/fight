@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.AutoSetup
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
 G2L["1"]["Enabled"] = false;
 G2L["1"]["Name"] = [[AutoSetup]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -137,7 +137,7 @@ task.spawn(C_4);
 -- StarterGui.AutoSetup.LocalScript
 local function C_5()
 local script = G2L["5"];
-	local urlok = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0c0bWcxL3dvdy1ob3ctZGlkLXlvdS1maW5kLWl0L3JlZnMvaGVhZHMvbWFpbi9SRUFETUUubWQ="
+	local urlok = "https://raw.githubusercontent.com/G4mg1/wow-how-did-you-find-it/refs/heads/main/README.md"
 	_G.MainModule = urlok 
 end;
 task.spawn(C_5);
