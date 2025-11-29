@@ -16,6 +16,7 @@ G2L["1"]["Enabled"] = false;
 G2L["1"]["Name"] = [[AutoSetup]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
+G2L["1"]["IgnoreGuiInset"] = true;
 
 
 -- StarterGui.AutoSetup.Loading
@@ -24,6 +25,7 @@ G2L["2"]["DisplayOrder"] = 2147483646;
 G2L["2"]["Name"] = [[Loading]];
 G2L["2"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["2"]["ResetOnSpawn"] = false;
+G2L["2"]["IgnoreGuiInset"] = true;
 
 
 -- StarterGui.AutoSetup.Loading.TextLabel
@@ -82,7 +84,7 @@ local script = G2L["4"];
 		_________("Checking if HttpService enable ! ")
 		wait(5)
 	
-		if game.HttpService.HttpEnabled then
+		if game.HttpService then
 			____("Connected To API Pls Wait Until Script Being SetUp")
 	
 			local success, err = pcall(function()
